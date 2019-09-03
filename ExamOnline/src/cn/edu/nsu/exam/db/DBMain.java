@@ -31,7 +31,7 @@ public abstract class DBMain<E>
 		//加载JDBC驱动
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		//获得DB连接
-		 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/examonline?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&useSSL=false", "root", "");
+		 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/exam?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&useSSL=false", "root", "");
 		//封装SQL
 		 pst = con.prepareStatement(sql);
 		 

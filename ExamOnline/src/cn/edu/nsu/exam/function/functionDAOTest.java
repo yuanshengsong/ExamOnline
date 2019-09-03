@@ -5,20 +5,23 @@ import java.sql.SQLException;
 public class functionDAOTest {
 	private static functionDAO  functionDAO = new functionDAO();
 	
-	public static void mian(String[] arg) {
+	public static void mian(String[] args) {
 		try {
 			getAllTest();
 			
 		}catch (ClassNotFoundException e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}
 		catch (SQLException e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}finally {
 			try {
 				functionDAO.release();
-			} catch (Exception e2) {
+			} catch (Exception e) {
 				// TODO: handle exception
+				e.printStackTrace();
 			}
 		}
 	}
