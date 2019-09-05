@@ -1,16 +1,20 @@
+<%@page import="cn.edu.nsu.exam.function.function" %>
+<%@page import="java.util.ArrayList"%>
+<%@page import="cn.edu.nsu.exam.function.functionDAO" %>
+<%@page contentType="text/html; charset=utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 	<head>
 		<meta charset="utf-8">
 		<!--全局CSS-->
-		<link rel="stylesheet" type="text/css" href="../../../css/admin.css">
-		<link rel="stylesheet" type="text/css" href="../../../css/pintuer.css">
-		<script src="../../../js/jquery.js"></script>
-		<script src="../../../js/pintuer.js"></script>
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/admin.css">
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/pintuer.css">
+		<script src="<%=request.getContextPath() %>/js/jquery.js"></script>
+		<script src="<%=request.getContextPath() %>/js/pintuer.js"></script>
 
 		<!--私有CSS-->
-		<link rel="stylesheet" href="../../../css/myModal.css">
+		<link rel="stylesheet" href="<%=request.getContextPath() %>/css/myModal.css">
 	</head>
 
 	<body>
@@ -62,99 +66,99 @@
 									<td>functions/DepartmentDetail.html</td>
 									<td>拥有此功能可以对系部信息进行操作</td>
 									<td>
-										<a href="Department/DepartmentDetail.html"><button class="button alert-blue" type="button">详情</button></a>
-										<a href="modify.html"><button class="button alert-green" type="button">修改</button></a>
-										<a href="Department/DepartmentPredom.html"><button class="button alert-yellow" type="button">配置权限</button></a>
-										<a href="success.html"><button class="button alert-red" type="button">禁用</button></a>
+										<a href="Department/DepartmentDetail.jsp"><button class="button alert-blue" type="button">详情</button></a>
+										<a href="Department/modify.jsp"><button class="button alert-green" type="button">修改</button></a>
+										<a href="Department/DepartmentPredom.jsp"><button class="button alert-yellow" type="button">配置权限</button></a>
+										<a href="success.jsp"><button class="button alert-red" type="button">禁用</button></a>
 									</td>
 								</tr>
 
 								<tr>
 									<td height="48">教师管理功能</td>
-									<td>functions/TeacherDetail.html</td>
+									<td>functions/TeacherDetail.jsp</td>
 									<td>拥有此功能可以对教师信息进行操作</td>
 									<td>
-										<a href="Teacher/TeacherDetail.html"><button class="button alert-blue" type="button">详情</button></a>
-										<a href="modify.html"><button class="button alert-green" type="button">修改</button></a>
-										<a href="Teacher/TeacherPredom.html"><button class="button alert-yellow" type="button">配置权限</button></a>
-										<a href="success.html"><button class="button alert-red" type="button">禁用</button></a>
+										<a href="Teacher/TeacherDetail.jsp"><button class="button alert-blue" type="button">详情</button></a>
+										<a href="Teacher/modify.jsp"><button class="button alert-green" type="button">修改</button></a>
+										<a href="Teacher/TeacherPredom.jsp"><button class="button alert-yellow" type="button">配置权限</button></a>
+										<a href="success.jsp"><button class="button alert-red" type="button">禁用</button></a>
 									</td>
 								</tr>
 								<tr>
 									<td height="48">学生管理功能</td>
-									<td>/functions/StudentDetail.html</td>
+									<td>/functions/StudentDetail.jsp</td>
 									<td>拥有此功能可以对学生信息进行操作</td>
 									<td>
-										<a href="Student/StudentDetail.html"><button class="button alert-blue" type="button">详情</button></a>
-										<a href="modify.html"><button class="button alert-green" type="button">修改</button></a>
-										<a href="Student/StudentPredom.html"><button class="button alert-yellow" type="button">配置权限</button></a>
-										<a href="success.html"><button class="button alert-red" type="button">禁用</button></a>
+										<a href="Student/StudentDetail.jsp"><button class="button alert-blue" type="button">详情</button></a>
+										<a href="Student/modify.jsp"><button class="button alert-green" type="button">修改</button></a>
+										<a href="Student/StudentPredom.jsp"><button class="button alert-yellow" type="button">配置权限</button></a>
+										<a href="success.jsp"><button class="button alert-red" type="button">禁用</button></a>
 									</td>
 								</tr>
 								<tr>
 									<td height="48">课程管理功能</td>
-									<td>/functions/CourseDetail.html</td>
+									<td>/functions/CourseDetail.jsp</td>
 									<td>拥有此功能可以对课程信息进行操作</td>
 									<td>
-										<a href="Course/CourseDetail.html"><button class="button alert-blue" type="button">详情</button></a>
-										<a href="modify.html"><button class="button alert-green" type="button">修改</button></a>
-										<a href="Course/CoursePredom.html"><button class="button alert-yellow" type="button">配置权限</button></a>
-										<a href="success.html"><button class="button alert-red" type="button">禁用</button></a>
+										<a href="Course/CourseDetail.jsp"><button class="button alert-blue" type="button">详情</button></a>
+										<a href="Course/modify.jsp"><button class="button alert-green" type="button">修改</button></a>
+										<a href="Course/CoursePredom.jsp"><button class="button alert-yellow" type="button">配置权限</button></a>
+										<a href="success.jsp"><button class="button alert-red" type="button">禁用</button></a>
 									</td>
 								</tr>
 								<tr>
 									<td height="48">专业管理功能</td>
-									<td>/functions/MajorDetail.html</td>
+									<td>/functions/MajorDetail.jsp</td>
 									<td>拥有此功能可以对专业信息进行操作</td>
 									<td>
-										<a href="Major/MajorDetail.html"><button class="button alert-blue" type="button">详情</button></a>
-										<a href="modify.html"><button class="button alert-green" type="button">修改</button></a>
-										<a href="Major/MajorPredom.html"><button class="button alert-yellow" type="button">配置权限</button></a>
-										<a href="success.html"><button class="button alert-red" type="button">禁用</button></a>
+										<a href="Major/MajorDetail.jsp"><button class="button alert-blue" type="button">详情</button></a>
+										<a href="Major/modify.jsp"><button class="button alert-green" type="button">修改</button></a>
+										<a href="Major/MajorPredom.jsp"><button class="button alert-yellow" type="button">配置权限</button></a>
+										<a href="success.jsp"><button class="button alert-red" type="button">禁用</button></a>
 									</td>
 								</tr>
 								<tr>
 									<td height="48">行政班管理功能</td>
-									<td>/functions/PoliticalClassDetail.html</td>
+									<td>/functions/PoliticalClassDetail.jsp</td>
 									<td>拥有此功能可以对行政班信息进行操作</td>
 									<td>
-										<a href="PoliticalClass/PoliticalClassDetail.html"><button class="button alert-blue" type="button">详情</button></a>
-										<a href="modify.html"><button class="button alert-green" type="button">修改</button></a>
-										<a href="PoliticalClass/PoliticalClassPredom.html"><button class="button alert-yellow" type="button">配置权限</button></a>
-										<a href="success.html"><button class="button alert-red" type="button">禁用</button></a>
+										<a href="PoliticalClass/PoliticalClassDetail.jsp"><button class="button alert-blue" type="button">详情</button></a>
+										<a href="PoliticalClass/modify.jsp"><button class="button alert-green" type="button">修改</button></a>
+										<a href="PoliticalClass/PoliticalClassPredom.jsp"><button class="button alert-yellow" type="button">配置权限</button></a>
+										<a href="success.jsp"><button class="button alert-red" type="button">禁用</button></a>
 									</td>
 								</tr>
 								<tr>
 									<td height="48">开课管理功能</td>
-									<td>functions/BeginDetail.html</td>
+									<td>functions/BeginDetail.jsp</td>
 									<td>拥有此功能可以对开课信息进行操作</td>
 									<td>
-										<a href="Begin/BeginDetail.html"><button class="button alert-blue" type="button">详情</button></a>
-										<a href="modify.html"><button class="button alert-green" type="button">修改</button></a>
-										<a href="Begin/BeginPredom.html"><button class="button alert-yellow" type="button">配置权限</button></a>
-										<a href="success.html"><button class="button alert-red" type="button">禁用</button></a>
+										<a href="Begin/BeginDetail.jsp"><button class="button alert-blue" type="button">详情</button></a>
+										<a href="Begin/modify.jsp"><button class="button alert-green" type="button">修改</button></a>
+										<a href="Begin/BeginPredom.jsp"><button class="button alert-yellow" type="button">配置权限</button></a>
+										<a href="success.jsp"><button class="button alert-red" type="button">禁用</button></a>
 									</td>
 								</tr>
 								<tr>
 									<td height="48">选课管理功能</td>
-									<td>functions/SCourseDetail.html</td>
+									<td>functions/SCourseDetail.jsp</td>
 									<td>拥有此功能可以对选课信息进行操作</td>
 									<td>
-										<a href="SCourse/SCourseDetail.html"><button class="button alert-blue" type="button">详情</button></a>
-										<a href="modify.html"><button class="button alert-green" type="button">修改</button></a>
-										<a href="SCourse/SCoursePredom.html"><button class="button alert-yellow" type="button">配置权限</button></a>
-										<a href="success.html"><button class="button alert-red" type="button">禁用</button></a>
+										<a href="SCourse/SCourseDetail.jsp"><button class="button alert-blue" type="button">详情</button></a>
+										<a href="SCourse/modify.jsp"><button class="button alert-green" type="button">修改</button></a>
+										<a href="SCourse/SCoursePredom.jsp"><button class="button alert-yellow" type="button">配置权限</button></a>
+										<a href="success.jsp"><button class="button alert-red" type="button">禁用</button></a>
 									</td>
 								</tr>
 								<tr>
 									<td height="48">学年管理功能</td>
-									<td>functions/YearDetail.html</td>
+									<td>functions/YearDetail.jsp</td>
 									<td>拥有此功能可以对学年信息进行操作</td>
 									<td>
-										<a href="Years/YearsDetail.html"><button class="button alert-blue" type="button">详情</button></a>
-										<a href="modify.html"><button class="button alert-green" type="button">修改</button></a>
-										<a href="Years/YearsPredom.html"><button class="button alert-yellow" type="button">配置权限</button></a>
-										<a href="success.html"><button class="button alert-red" type="button">禁用</button></a>
+										<a href="Years/YearsDetail.jsp"><button class="button alert-blue" type="button">详情</button></a>
+										<a href="Years/modify.jsp"><button class="button alert-green" type="button">修改</button></a>
+										<a href="Years/YearsPredom.jsp"><button class="button alert-yellow" type="button">配置权限</button></a>
+										<a href="success.jsp"><button class="button alert-red" type="button">禁用</button></a>
 									</td>
 								</tr>
 							</tbody>
@@ -224,7 +228,7 @@
 		<script src="/bookshop/js/admin/share/bootstrap.min.js"></script>-->
 	<!--	<script src="/bookshop/js/admin/share/share.js"></script>-->
 		<!--私有JS-->
-		<script src="../../../js/myModal.js"></script>
+		<script src="<%=request.getContextPath() %>/js/myModal.js"></script>
 
 		<!--<script type="text/javascript"></script>-->
 	</body>

@@ -1,5 +1,9 @@
 package cn.edu.nsu.exam.function;
 
+/**
+ * @author YSS
+ *
+ */
 public class function {
 	private int function_id;
 	private int roles_id;
@@ -25,6 +29,10 @@ public class function {
 	public int getFunction_id() {
 		return function_id;
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	
 	/**
 	 * @param function_id the function_id to set
 	 */

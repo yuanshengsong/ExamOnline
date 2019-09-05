@@ -1,3 +1,7 @@
+<%@page import="cn.edu.nsu.exam.function.function" %>
+<%@page import="java.util.ArrayList"%>
+<%@page import="cn.edu.nsu.exam.function.functionDAO" %>
+<%@page contentType="text/html; charset=utf-8"%>
 <!DOCTYPE html>
 <html lang="zh-cn">
 
@@ -7,27 +11,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<meta name="renderer" content="webkit">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../../../../css/admin.css">
-		<link rel="stylesheet" type="text/css" href="../../../../css/pintuer.css">
-		<script src="../../../../js/jquery.js"></script>
-		<script src="../../../../js/pintuer.js"></script>
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/admin.css">
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/pintuer.css">
+		<script src="<%=request.getContextPath() %>/js/jquery.js"></script>
+		<script src="<%=request.getContextPath() %>/js/pintuer.js"></script>
 	</head>
 
 	<body>
 		<div class="panel admin-panel">
-			<div class="panel-head"><strong class="icon-reorder"> 选课管理</strong></div>
+			<div class="panel-head"><strong class="icon-reorder"> 行政班管理</strong></div>
 			<div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 功能基本信息</strong></div>
 			<table class="table table-hover text-left">
 				<tr>
 					<th width="33%">名称</th>
 					<th width="33%">URI</th>
 					<th width="33%">说明</th>
+
 				</tr>
 
 				<tr>
-					<td>选课管理功能</td>
-					<td>functions/SCourseDetail.html</td>
-					<td>对选课信息进行操作</td>
+					<td>行政班管理功能</td>
+					<td>functions/PoliticalClassDetail.jsp</td>
+					<td>对行政班信息进行操作</td>
 				</tr>
 
 			</table>
@@ -50,20 +55,21 @@
 							<td>系部主任</td>
 							<td>可对所有信息进行查看</td>
 						</tr>
-						<tr>
-							<td>教师</td>
-							<td>可对所有选课信息进行查看</td>
-						</tr>
-						<tr>
-							<td>学生</td>
-							<td>可对选课信息进行查看</td>
-						</tr>
+						<!--<tr>
+      <td>教师</td>     
+      <td>可对所有信息进行查看</td>     
+  </tr>
+  <tr>
+      <td>学生</td>     
+      <td>可对所有信息进行查看</td>     
+  </tr>-->
 					</table>
 
+					
 			</div>
 			</form>
 		</div>
-		<a href="../Functionlist.html"><button class="button bg-main icon-check-square-o" type="submit"> 返回</button></a>
+		<a href="../Functionlist.jsp"><button class="button bg-main icon-check-square-o" type="submit"> 返回</button></a>
 		</div>
 	</body>
 

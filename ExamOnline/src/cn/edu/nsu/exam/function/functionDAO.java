@@ -42,10 +42,11 @@ public class functionDAO extends DBMain<function> {
 
 	@Override
 	public void add(function dataObj) throws ClassNotFoundException, SQLException {
-		String sql = "INSERT INTO function(function_name, function_URI, function_note)VALUES(?, ?, ?)";
+		String sql = "INSERT INTO function(function_id,function_name, function_URI, function_note)VALUES(?, ?, ?, ?)";
 		pst = getPrepareStatement(sql);
-		pst.setInt(2, dataObj.getRoles_id());
 		pst.setInt(1, dataObj.getFunction_id());
+//		pst.setInt(2, dataObj.getRoles_id());
+		pst.setString(2, dataObj.getFunction_name());
 		pst.setString(3, dataObj.getFunction_URI());
 		pst.setString(4, dataObj.getFunction_note());
 		

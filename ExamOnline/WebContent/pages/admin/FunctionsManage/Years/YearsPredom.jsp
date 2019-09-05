@@ -1,3 +1,7 @@
+<%@page import="cn.edu.nsu.exam.function.function" %>
+<%@page import="java.util.ArrayList"%>
+<%@page import="cn.edu.nsu.exam.function.functionDAO" %>
+<%@page contentType="text/html; charset=utf-8"%>
 <!DOCTYPE html>
 <html lang="zh-cn">
 
@@ -7,15 +11,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<meta name="renderer" content="webkit">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../../../../css/admin.css">
-		<link rel="stylesheet" type="text/css" href="../../../../css/pintuer.css">
-		<script src="../../../../js/jquery.js"></script>
-		<script src="../../../../js/pintuer.js"></script>
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/admin.css">
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/pintuer.css">
+		<script src="<%=request.getContextPath() %>/js/jquery.js"></script>
+		<script src="<%=request.getContextPath() %>/js/pintuer.js"></script>
 	</head>
 
 	<body>
 		<div class="panel admin-panel">
-			<div class="panel-head"><strong class="icon-reorder"> 课程管理</strong></div>
+			<div class="panel-head"><strong class="icon-reorder"> 学年管理</strong></div>
 			<div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 功能基本信息</strong></div>
 			<table class="table table-hover text-left">
 				<tr>
@@ -26,8 +30,9 @@
 				</tr>
 
 				<tr>
-					<td>课程管理功能</td>
-					<td>对课程信息进行操作</td>
+					<td>学年管理功能</td>
+					<td>functions/YearPredom.jsp</td>
+					<td>对学年信息进行操作</td>
 				</tr>
 
 			</table>
@@ -57,16 +62,12 @@
 								<td>系部主任</td>
 								<td>可对所有信息进行查看</td>
 							</tr>
-							<tr>
+							<!--<tr>
 			                  	<td><input type="checkbox" value=""></td>
 			                    <td>教师</td>
 			                    <td>可对课程信息进行查看</td>
-			                 </tr>
-							<tr>
-			                  	<td><input type="checkbox" value=""></td>
-			                    <td>学生</td>
-			                    <td>可对课程信息进行查看</td>
-			                 </tr>
+			                  </tr>-->
+
 						</tbody>
 					</table>
 			</div>
@@ -76,7 +77,7 @@
 		</div>
 		</div>
 		<div class="field">
-			<a href="../Functionlist.html"><button class="button bg-main icon-check-square-o" type="submit"> 返回</button></a>
+			<a href="../Functionlist.jsp"><button class="button bg-main icon-check-square-o" type="submit"> 返回</button></a>
 			<button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
 		</div>
 	</body>

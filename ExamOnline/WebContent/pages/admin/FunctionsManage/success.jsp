@@ -1,3 +1,7 @@
+<%@page import="cn.edu.nsu.exam.function.function" %>
+<%@page import="java.util.ArrayList"%>
+<%@page import="cn.edu.nsu.exam.function.functionDAO" %>
+<%@page contentType="text/html; charset=utf-8"%>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -29,6 +33,6 @@
 			</form>
 		</div>
 		<div class="field">
-			<a href="Functionlist.html"><button class="button bg-main icon-check-square-o" type="submit"> 返回</button></a>
+			<a href="Functionlist.jsp"><button class="button bg-main icon-check-square-o" type="submit"> 返回</button></a>
 		</div>
 </body></html>
